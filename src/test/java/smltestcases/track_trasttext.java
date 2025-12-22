@@ -2,13 +2,14 @@ package smltestcases;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Base.Baseclass;
 import pageclass.Loginpage;
 import pageclass.track_trace;
 
-
+@Listeners(listeners.TestListener.class)
 public class track_trasttext extends Baseclass {
 
 	@Test
