@@ -36,7 +36,8 @@ else if (browser.equalsIgnoreCase("firebox")) {
 else if(browser.equalsIgnoreCase("Microsoft Edge")) {
 	 driver = new  EdgeDriver();
 }
-	driver.get("https://pro.smlsaarthi.com/login?redirect=%2F");
+	driver.navigate().to("https://pro.smlsaarthi.com/login?redirect=%2F");
+	driver.navigate().refresh();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -44,7 +45,7 @@ else if(browser.equalsIgnoreCase("Microsoft Edge")) {
 	System.out.println(t);
 	}
 	
-	//@AfterMethod
+	@AfterMethod
     public void tearDown() {
         driver.quit();
     }
