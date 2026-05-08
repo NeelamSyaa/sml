@@ -1,4 +1,4 @@
-package ConfigReader;
+package ConfigReaderutil;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

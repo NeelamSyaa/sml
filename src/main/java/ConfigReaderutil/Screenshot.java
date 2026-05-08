@@ -1,4 +1,4 @@
-package ScreenshotUtil;
+package ConfigReaderutil;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,6 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class Screenshot {
+	
 	WebDriver driver;
 
 	public static void takescreenshortforfailedtest(WebDriver driver) {
