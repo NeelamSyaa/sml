@@ -7,21 +7,22 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestListener;
+import org.testng.internal.annotations.ITest;
 
-public class Screenshot {
+public class Screenshot implements ITestListener {
 	
 	WebDriver driver;
 
-	public static void takescreenshortforfailedtest(WebDriver driver) {
+	public static void takescreenshortforfailedtest(WebDriver driver) throws IOException {
 
-		try {
+		  if (driver != null) {
 			TakesScreenshot ts = (TakesScreenshot) driver;
 			File src = ts.getScreenshotAs(OutputType.FILE);
 			File desh = new File("./screenshots/failure.png");
 			FileUtils.copyFile(src, desh);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		}  else {
+			System.out.println("driver is null. Cannot take screenshot.");
 		}
-	}
-}
+	}}
+

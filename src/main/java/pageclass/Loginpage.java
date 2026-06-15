@@ -25,6 +25,8 @@ WebDriver driver ;
 	WebElement siginbtn;
 	@FindBy(xpath="//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-t4pc3u']/h4")
 	WebElement dashboardPage;
+	@FindBy(xpath =  "//div[text()='Success! Logged In']")
+	WebElement  Successmassage;
 	
 	
 	public Loginpage(WebDriver driver) {
@@ -52,7 +54,10 @@ WebDriver driver ;
 
         return dashboardPage.getText();
     }
-
+public void  succmgs() {
+String textfun = Successmassage.getText();
+System.out.println(" " +textfun);
+}
 	
 
 }

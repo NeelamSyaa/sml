@@ -3,6 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="smltestcases.ReportTest">
+        <methods>
+          <include name="setuploginpase"/>
+          <include name="tearDown"/>
+          <include name="report"/>
+        </methods>
+      </class> <!-- smltestcases.ReportTest -->
+      <class name="smltestcases.track_trasttest">
+        <methods>
+          <include name="setuploginpase"/>
+          <include name="tearDown"/>
+          <include name="tackmaodule"/>
+        </methods>
+      </class> <!-- smltestcases.track_trasttest -->
       <class name="smltestcases.LoginTest">
         <methods>
           <include name="setuploginpase"/>
@@ -10,6 +24,13 @@
           <include name="loginTest"/>
         </methods>
       </class> <!-- smltestcases.LoginTest -->
+      <class name="smltestcases.deshbaodtext">
+        <methods>
+          <include name="gotolindatapage"/>
+          <include name="setuploginpase"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- smltestcases.deshbaodtext -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
